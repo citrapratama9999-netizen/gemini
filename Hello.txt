@@ -1,1 +1,2 @@
 Halo, ini langkah pertama saya belajar GitHub!
+Saya sedang belajar fitur Diff dan History.
