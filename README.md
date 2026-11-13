@@ -1,26 +1,32 @@
 # RuangKepala — Administrasi Kepala Madrasah
 
-Aplikasi administrasi web berbahasa Indonesia untuk mengelola kegiatan madrasah. Aplikasi dapat dijalankan secara lokal tanpa dependensi eksternal.
+Aplikasi administrasi madrasah berbasis HTML/CSS/JavaScript yang siap dipakai untuk kebutuhan operasional kepala madrasah, mulai dari agenda, surat, GTK, program kerja, supervisi, sarana-prasarana, tugas prioritas, hingga backup data.
 
-## Mulai
+## Fitur utama
 
-Buka `administrasi.html` di browser modern. Ini adalah aplikasi lengkap yang disarankan untuk digunakan. `index.html` dan `administrasi-gtk.html` merupakan versi demo/awal.
+- Dashboard ringkasan kegiatan, surat, program, dan GTK
+- Agenda & rapat dengan tambah, ubah, hapus, dan pencarian
+- Persuratan masuk dan keluar dengan status dan tindak lanjut
+- Data GTK dengan formulir CRUD dan ekspor CSV
+- Program kerja dengan target, progress, dan anggaran
+- Jadwal supervisi akademik dan catatan hasil
+- Inventaris sarana serta prasarana madrasah
+- Daftar tugas prioritas kepala madrasah
+- Laporan ringkas dan cadangan data JSON
+- Login sederhana untuk akses aplikasi (demo: admin / admin123)
+- Tampilan responsif untuk desktop dan ponsel
 
-## Modul
+## Cara menjalankan
 
-- Dashboard dengan ringkasan agenda, surat, program, GTK, inventaris, dan tugas.
-- Agenda dan rapat: tambah, cari, ubah, dan hapus.
-- Persuratan: catat surat masuk/keluar, status, asal/tujuan, cari, ubah, dan hapus.
-- Data GTK: direktori nama, NIP/NIK, jabatan, status, dan kontak, termasuk CRUD.
-- Program kerja: target, bidang, tanggal, realisasi, anggaran, status, dan catatan.
-- Supervisi: penjadwalan, status, hasil, dan tindak lanjut.
-- Sarana dan prasarana: inventaris jumlah, kategori, kondisi, lokasi, dan catatan.
-- Daftar tugas kepala madrasah dengan tenggat dan checklist.
-- Pencarian per modul, ekspor CSV, cetak laporan, dan ekspor/impor cadangan JSON.
-- Tampilan responsif untuk ponsel dan desktop.
+1. Buka file `administrasi.html` di browser modern.
+2. Masukkan username dan password demo berikut:
+   - Username: admin
+   - Password: admin123
+3. Setelah login, semua modul siap digunakan.
 
-## Penyimpanan dan keamanan
+## Catatan penting
 
-Data disimpan dalam `localStorage` browser pada perangkat yang sedang digunakan. Data tidak disinkronkan antarperangkat dan akan hilang jika penyimpanan browser dibersihkan; unduh cadangan JSON secara berkala. Jangan memasukkan data pribadi sensitif ke demo ini.
-
-Aplikasi ini **belum memiliki autentikasi atau basis data server**. Login yang hanya dibuat di HTML/JavaScript tidak aman untuk melindungi data. Untuk penggunaan resmi multi-pengguna, diperlukan backend dengan autentikasi, kontrol akses, basis data, HTTPS, dan pencadangan terkelola. Data contoh harus diganti dengan data resmi yang telah diverifikasi.
+- Data disimpan di `localStorage` browser pada perangkat yang dipakai.
+- Backup data JSON dapat diunduh dan dipulihkan dari menu laporan.
+- Aplikasi ini masih berbasis frontend lokal, jadi untuk penggunaan resmi multi-pengguna dibutuhkan backend, autentikasi aman, database server, dan hosting yang bertanggung jawab.
+- Ubah nama madrasah, data demo, dan konten sesuai kebutuhan operasional Anda.
