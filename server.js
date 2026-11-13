@@ -130,7 +130,7 @@ app.post('/api/auth/login', loginLimiter, requireCsrf, async (req, res, next) =>
     const username = typeof req.body?.username === 'string' ? req.body.username.trim() : '';
     const password = typeof req.body?.password === 'string' ? req.body.password : '';
     const user = db.prepare('SELECT id, username, password_hash FROM users WHERE username = ?').get(username);
-    const valid = user ? await bcrypt.compare(password, user.password_hash) : await bcrypt.compare(password || 'invalid-password', '$2a$12$C6UzMDM.H6dfI/f/IKcEe.5J4Pr4DTf8IPQ2bA2wJ7gLpoQJ3I1Gm');
+    const valid = user ? await bcrypt.compare(password, user.password_hash) : false;
     if (!valid || !user) return res.status(401).json({ error: 'Username atau password salah.' });
     req.session.regenerate(err => {
       if (err) return next(err);
@@ -178,7 +178,7 @@ app.delete('/api/data/:collection/:id', requireAuth, requireCsrf, validCollectio
 
 app.use('/api', (req, res) => res.status(404).json({ error: 'Endpoint API tidak ditemukan.' }));
 app.use(express.static(path.join(ROOT, 'server', 'public'), { extensions: ['html'], maxAge: isProduction ? '1h' : 0 }));
-app.get('*', (req, res) => res.sendFile(path.join(ROOT, 'server', 'public', 'index.html'));
+app.get('*', (req, res) => res.sendFile(path.join(ROOT, 'server', 'public', 'index.html')));
 app.use((err, req, res, next) => {
   console.error(err);
   if (res.headersSent) return next(err);
