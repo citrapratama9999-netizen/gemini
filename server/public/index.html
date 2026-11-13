@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f6f3">
+  <title>RuangKepala — Administrasi Madrasah</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <form id="loginForm" class="login-card">
+      <div class="brand"><div class="brand-mark">م</div><div><small>Administrasi Madrasah</small><strong>RuangKepala</strong></div></div>
+      <h1>Masuk aplikasi</h1><p>Gunakan akun administrator yang disiapkan di server.</p>
+      <label>Username<input name="username" autocomplete="username" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="primary" type="submit">Masuk</button><div id="loginError" class="error" role="alert"></div>
+      <small class="note">Akun demo browser lama tidak berlaku di server ini.</small>
+    </form>
+  </section>
+  <div id="app" class="app hidden">
+    <aside id="sidebar" class="sidebar"><div class="brand"><div class="brand-mark">م</div><div><strong>RuangKepala</strong><small>Administrasi Madrasah</small></div></div>
+      <nav id="nav"><button data-page="dashboard" class="active">◫ Dashboard</button><button data-page="agenda">▦ Agenda & Rapat</button><button data-page="surat">✉ Persuratan</button><button data-page="program">◎ Program Kerja</button><button data-page="supervisi">⌕ Supervisi</button><button data-page="gtk">♙ Data GTK</button><button data-page="sarpras">⌂ Sarana & Prasarana</button><button data-page="tasks">✓ Tugas Prioritas</button><button data-page="laporan">▤ Laporan & Backup</button></nav>
+      <div class="user"><span id="userName">Admin</span><button id="logout" class="secondary">Keluar</button></div>
+    </aside>
+    <main class="main"><header class="topbar"><button id="menuToggle" class="secondary mobile-only" aria-label="Buka menu">☰</button><div><small>MTs Harapan Bangsa /</small> <b id="crumb">Dashboard</b></div><span id="connection" class="connection">Menghubungkan…</span></header><section id="page"></section></main>
+  </div>
+  <div id="modalBackdrop" class="backdrop"><form id="recordForm" class="modal"><h2 id="modalTitle">Tambah data</h2><p id="modalHelp"></p><div id="fields" class="fields"></div><footer><button type="button" class="secondary" id="cancel">Batal</button><button class="primary" type="submit">Simpan</button></footer></form></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
