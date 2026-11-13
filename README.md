@@ -1,23 +1,26 @@
-# RuangKepala — Administrasi Madrasah
+# RuangKepala — Administrasi Kepala Madrasah
 
-Aplikasi web sederhana berbahasa Indonesia untuk membantu Kepala Madrasah mengelola administrasi dan memantau kegiatan harian.
+Aplikasi administrasi web berbahasa Indonesia untuk mengelola kegiatan madrasah. Aplikasi dapat dijalankan secara lokal tanpa dependensi eksternal.
 
-## Menjalankan aplikasi
+## Mulai
 
-Buka `index.html` di browser modern. Aplikasi tidak memerlukan instalasi, server, atau dependensi eksternal.
+Buka `administrasi.html` di browser modern. Ini adalah aplikasi lengkap yang disarankan untuk digunakan. `index.html` dan `administrasi-gtk.html` merupakan versi demo/awal.
 
-## Fitur
+## Modul
 
-- Dashboard ringkasan agenda, persuratan, program kerja, dan GTK.
-- Agenda dan rapat: tambah, cari, dan hapus jadwal.
-- Persuratan: catat surat masuk/keluar, cari, dan hapus.
-- Ringkasan program kerja, supervisi, data GTK, sarana-prasarana, dan laporan.
-- Checklist prioritas mingguan dan cetak laporan.
-- Halaman `administrasi-gtk.html` untuk CRUD lengkap direktori GTK (tambah, ubah, hapus, cari, dan filter) serta ekspor CSV.
-- Tampilan responsif untuk desktop dan ponsel.
-- Agenda dan surat disimpan lokal di browser menggunakan `localStorage`.
-- Data GTK pada halaman direktori disimpan lokal dengan kunci `rk-gtk-data` di browser.
+- Dashboard dengan ringkasan agenda, surat, program, GTK, inventaris, dan tugas.
+- Agenda dan rapat: tambah, cari, ubah, dan hapus.
+- Persuratan: catat surat masuk/keluar, status, asal/tujuan, cari, ubah, dan hapus.
+- Data GTK: direktori nama, NIP/NIK, jabatan, status, dan kontak, termasuk CRUD.
+- Program kerja: target, bidang, tanggal, realisasi, anggaran, status, dan catatan.
+- Supervisi: penjadwalan, status, hasil, dan tindak lanjut.
+- Sarana dan prasarana: inventaris jumlah, kategori, kondisi, lokasi, dan catatan.
+- Daftar tugas kepala madrasah dengan tenggat dan checklist.
+- Pencarian per modul, ekspor CSV, cetak laporan, dan ekspor/impor cadangan JSON.
+- Tampilan responsif untuk ponsel dan desktop.
 
-## Catatan
+## Penyimpanan dan keamanan
 
-Data pada aplikasi ini adalah contoh/demonstrasi. Penyimpanan `localStorage` hanya tersedia di browser/perangkat yang digunakan dan bukan pengganti basis data bersama atau pencadangan resmi. Ubah nama madrasah, identitas, tahun pelajaran, dan data contoh sebelum digunakan.
+Data disimpan dalam `localStorage` browser pada perangkat yang sedang digunakan. Data tidak disinkronkan antarperangkat dan akan hilang jika penyimpanan browser dibersihkan; unduh cadangan JSON secara berkala. Jangan memasukkan data pribadi sensitif ke demo ini.
+
+Aplikasi ini **belum memiliki autentikasi atau basis data server**. Login yang hanya dibuat di HTML/JavaScript tidak aman untuk melindungi data. Untuk penggunaan resmi multi-pengguna, diperlukan backend dengan autentikasi, kontrol akses, basis data, HTTPS, dan pencadangan terkelola. Data contoh harus diganti dengan data resmi yang telah diverifikasi.
