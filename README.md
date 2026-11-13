@@ -13,8 +13,10 @@ Buka `index.html` di browser modern. Aplikasi tidak memerlukan instalasi, server
 - Persuratan: catat surat masuk/keluar, cari, dan hapus.
 - Ringkasan program kerja, supervisi, data GTK, sarana-prasarana, dan laporan.
 - Checklist prioritas mingguan dan cetak laporan.
+- Halaman `administrasi-gtk.html` untuk CRUD lengkap direktori GTK (tambah, ubah, hapus, cari, dan filter) serta ekspor CSV.
 - Tampilan responsif untuk desktop dan ponsel.
 - Agenda dan surat disimpan lokal di browser menggunakan `localStorage`.
+- Data GTK pada halaman direktori disimpan lokal dengan kunci `rk-gtk-data` di browser.
 
 ## Catatan
 
